@@ -4,8 +4,8 @@
   "description": "My all Social Media web application",
   "main": "index.js",
   "scripts": {
-     "start": "nodemon index.js" ,
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start": "nodemon index.js" ,  //to avoid writting nodemon index.js repeatedly
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "Social"
