@@ -5,7 +5,7 @@ const postcontroller = require('../controllers/post_controller');
 
 console.log('router loaded');
 
-router.get('/posts', profilecontroller.profile);
+router.get('/posts', postcontroller.post);
  
 
 
