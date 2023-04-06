@@ -11,6 +11,7 @@ router.get('/', homecontroller.home);
 router.use('/user',require('./user')); 
 router.use('/posts',require('./posts'));
 
+
 // for any further routes excess from here
 // router.use ('/routerName',require('./routerfile'));
 
