@@ -1,0 +1,11 @@
+#footer-foot {
+  height: 10vh;
+  background-color: lightcoral;
+  margin-top: 160px; }
+  #footer-foot h2 {
+    font-size: 15px;
+    color: antiquewhite; }
+  #footer-foot ul {
+    display: flex;
+    text-decoration: none;
+    margin: 10px; }

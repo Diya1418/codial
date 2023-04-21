@@ -1,4 +1,57 @@
-body{
-    margin:0;
-    /* text-align: center; */
-}
+body {
+  background-color: #F0F0F0;
+  font-family: Arial, sans-serif;
+  height: 100%; }
+  body h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px; }
+  body form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    body form input[type="text"], body form input[type="email"], body form input[type="password"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #F5F5F5;
+      transition: all 0.3s ease; }
+      body form input[type="text"]:focus, body form input[type="email"]:focus, body form input[type="password"]:focus {
+        outline: none;
+        box-shadow: 0 0 5px #4CAF50; }
+    body form input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: all 0.3s ease; }
+      body form input[type="submit"]:hover {
+        background-color: #3d8b40; }
+    body form p {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #999999; }
+      body form p a {
+        color: #4CAF50;
+        text-decoration: none; }
+        body form p a:hover {
+          text-decoration: underline; }
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #999999; }

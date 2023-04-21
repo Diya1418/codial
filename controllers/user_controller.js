@@ -17,34 +17,34 @@ const User = require('../models/user')
 //       return res.redirect('/user/sign-in')
 //    }
 module.exports.profile = function(req, res){
-   User.findById(req.params.id)
-       .then(user => {
-           res.render('user_profile', {
-               title: 'User Profile',
-               user: user
-           });
-       })
-       .catch(err => {
-           console.log('Error in finding user: ', err);
-           return res.redirect('back');
-       });
+   return res.render('user_profile', {
+       title: 'User Profile'
+   })
+}
+
 //    return res.render('user_profile', {
 //       title: "User Profile"
 //   });
-}
 
 //render sign up page
 module.exports.signUp = function(req,res){
+   if(req.isAuthenticated()){
+      return res.redirect('/user/profile');
+   }
+
    return res.render('user_sign_up',{
       title: "Codial | Sign Up"
    })
   
-   User
 
 }
 
 //render sign in page
 module.exports.signIn = function(req,res){
+   if(req.isAuthenticated()){
+      return res.redirect('/user/profile');
+   }
+
    return res.render('user_sign_in',{
       title: "Codial | Sign In"
    })
@@ -73,10 +73,18 @@ module.exports.create = async function(req, res) {
 
  
 // get the sign in data
-module.exports.createSession = async function(req, res){
-   
-   //steps to authenticate
-   //find the user
-   
+module.exports.createSession = function(req, res){
+   return res.redirect('/');
 
  }
+
+ module.exports.destroySession = function(req, res){
+   req.logout(function(err) {  // passport provide this function
+       if (err) {
+           console.log(err);
+           return next(err);
+       }
+       
+       return res.redirect('/');
+   });
+}
