@@ -2,11 +2,13 @@
     margin: 0px;
     height:8vh;
     background-color:lightcoral;
-    
+    display:flex;
+    justify-content: space-between;
     h2{
         color: antiquewhite;
         font-size:50px;
         display:inline;
+        margin-top: 0px;
     }
     ul{
         display: flex;
@@ -15,5 +17,8 @@
         li{
             margin:20px;
         }
+    }
+    a{
+        cursor: pointer;
     }
 }

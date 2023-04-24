@@ -1,11 +1,17 @@
 #footer-foot {
   height: 10vh;
   background-color: lightcoral;
-  margin-top: 160px; }
+  margin-top: 160px;
+  display: flex;
+  justify-content: space-between; }
   #footer-foot h2 {
     font-size: 15px;
     color: antiquewhite; }
   #footer-foot ul {
     display: flex;
-    text-decoration: none;
     margin: 10px; }
+    #footer-foot ul li {
+      text-decoration: none;
+      margin-right: 25px; }
+  #footer-foot a {
+    cursor: crosshair; }

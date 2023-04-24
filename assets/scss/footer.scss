@@ -2,14 +2,22 @@
     height: 10vh;
     background-color: lightcoral;
     margin-top:160px;
-
+    display:flex;
+    justify-content: space-between;
     h2{
         font-size: 15px;
         color: antiquewhite;
     }
     ul{
         display:flex;
-        text-decoration: none;
+       
         margin:10px;
+        li{
+           text-decoration: none;
+           margin-right:25px;
+        }
+    }
+    a{
+        cursor:crosshair;
     }
 }
