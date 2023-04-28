@@ -1,9 +1,15 @@
-#header-head{
+nav{
     margin: 0px;
     height:8vh;
     background-color:lightcoral;
     display:flex;
     justify-content: space-between;
+    p{
+        font-size: 50px;
+        color:aliceblue;
+        text-decoration: none;
+        margin-top: 0px;
+    }
     h2{
         color: antiquewhite;
         font-size:50px;
