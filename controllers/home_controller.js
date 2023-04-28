@@ -1,5 +1,5 @@
 const Post = require('../models/posts');
-
+const User = require('../models/user');
 
 module.exports.home = async function(req,res){
  //  console.log(req.cookies);
@@ -18,7 +18,7 @@ module.exports.home = async function(req,res){
 
   //populate user of each post
   try {
-    
+    // populate means preloading the schema 
     const posts = await Post.find({})
     .populate('user')
     .populate({
@@ -28,13 +28,12 @@ module.exports.home = async function(req,res){
       }
     })
     .exec();
-    for(let i of posts){
-      console.log(i.comments);
-    }
+    const users = await User.find({})
+    
     res.render('home', {
       title: "Codial | Home",
       posts: posts,
-           
+      all_users: users   
     })
   } catch(err) {
     console.log(err);

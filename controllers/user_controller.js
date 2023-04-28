@@ -1,4 +1,4 @@
-const User = require('../models/user')
+const User = require('../models/user');
 //render profile
 // module.exports.profile= function(req,res){
 //    if(req.cookies.user_id){
@@ -16,11 +16,29 @@ const User = require('../models/user')
 //    else{
 //       return res.redirect('/user/sign-in')
 //    }
-module.exports.profile = function(req, res){
-   return res.render('user_profile', {
-       title: 'User Profile'
-   })
+// module.exports.profile = function(req, res){
+//    User.findById(req.params.id , function(err, user){
+//       return res.render('user_profile', {
+//          title: 'User Profile',
+//          profile_user: user
+//      }) 
+
+//    });
+   
+// }
+module.exports.profile = async function(req, res) {
+   try {
+      const user = await User.findById(req.params.id);
+      res.render('user_profile', {
+         title: 'User Profile',
+         profile_user: user
+      });
+   }catch(err){
+      console.error(err);
+      res.status(500).send('Internal Server Error');
+   }
 }
+
 
 //    return res.render('user_profile', {
 //       title: "User Profile"
