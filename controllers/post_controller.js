@@ -22,11 +22,12 @@ try{  const post= await Post.create({
     content: req.body.content,  //fetching value of the "content" field submitted in request body
         user: req.user._id  //?
 });
-
+    req.flash('success', 'Post published');
     return res.redirect('back');
 }
 catch(err)
 {
+    req.flash('error', err);
     console.log('Error in creating Post'); 
     return;
 } 
@@ -56,13 +57,19 @@ catch(err)
         // await post.remove(); now this doesn't work
         await Post.deleteOne({ _id: post._id }).exec();
         await Comment.deleteMany({ post: req.params.id });
+        req.flash('success', 'Post and associated comments deleted');
+        
         return res.redirect('back');
       } else {
+        req.flash('error ', 'You cannot delete this Post');
+
         return res.redirect('back');
       }
     } catch (err) {
       // Handle error
-      console.error(err);
+      req.flash('error ', err);
+
+      // console.error(err);
       return res.status(500).send('Internal Server Error');
     }
   };

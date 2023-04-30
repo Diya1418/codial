@@ -5,21 +5,23 @@ const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
 
 //authentication using passport
-async function authenticateUser(email, password, done) {
+async function authenticateUser(req,email, password, done) {   // to pass this req(flash mssg) passReqToCallback is set to true
     try {
       const user = await User.findOne({ email: email });
       if (!user || user.password !== password) {
-        console.log('Invalid Username/Password');
+        // console.log('Invalid Username/Password');
+        req.flash('error','Invalid Username/Password');
         return done(null, false);
       }
       return done(null, user);
     } catch (err) {
-      console.log('Error in finding user --> Passport');
+      req.flash('error', err);
+      // console.log('Error in finding user --> Passport');
       return done(err);
     }
   }
   
-  passport.use(new LocalStrategy({ usernameField: 'email' }, authenticateUser));
+  passport.use(new LocalStrategy({ usernameField: 'email',passReqToCallback: true}, authenticateUser));
   
 
 //serializing the user to decide which key is to be kept in the cookies
