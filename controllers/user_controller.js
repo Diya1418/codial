@@ -118,17 +118,22 @@ module.exports.create = async function(req, res) {
  
 // get the sign in data
 module.exports.createSession = function(req, res){
+   req.flash('success', 'Logged in Successfully ');
    return res.redirect('/');
 
  }
 
  module.exports.destroySession = function(req, res){
+   
    req.logout(function(err) {  // passport provide this function
        if (err) {
            console.log(err);
            return next(err);
        }
+   req.flash('success', 'You have Logged Out! ');
        
-       return res.redirect('/');
+      // return res.redirect('/',{flash: {success, ""}}); no need 
+      // to pass flash to next page like this instead create a middleware to show flash mssg 
+      return res.redirect('/');
    });
 }
