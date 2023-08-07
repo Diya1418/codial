@@ -22,6 +22,17 @@ try{  const post= await Post.create({
     content: req.body.content,  //fetching value of the "content" field submitted in request body
         user: req.user._id  //?
 });
+
+if(req.xhr){
+  return res.status(200).json({
+    data: {
+      post: post,
+    },
+    message:"Post created!"
+  })
+}
+
+
     req.flash('success', 'Post published');
     return res.redirect('back');
 }
