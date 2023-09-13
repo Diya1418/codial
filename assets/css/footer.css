@@ -1,12 +1,13 @@
 #footer-foot {
   height: 10vh;
-  background-color: lightcoral;
-  margin-top: 160px;
+  background-color: #c40404;
+  margin-bottom: 0px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
   #footer-foot h2 {
     font-size: 15px;
-    color: antiquewhite; }
+    color: black; }
   #footer-foot ul {
     display: flex;
     margin: 10px; }
@@ -14,4 +15,9 @@
       text-decoration: none;
       margin-right: 25px; }
   #footer-foot a {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif; }
+    #footer-foot a:hover {
+      color: grey; }

@@ -1,17 +1,47 @@
 #home-container{
     display: flex;
+    background-color: rgb(238, 212, 154);
+    height: 100vh;
+    margin: 0px;
 
     #feed-post{
        width: 70%;
        padding: 10px;
 
+       li{
+        
+        &:hover{
+            color:blueviolet;
+        }
+       }
     }
+
+    #posts-list-container{
+        
+        ul{
+           list-style-type: none;
+
+        }
+    }
+
 
     #user-friends{
         width: 30%;
         padding: 10px;
         border-left: 1px solid lightgray;
         height: 100%;
+        background-color: #ed8414bd;
+
+        a{
+            text-decoration: none;
+            color:  blueviolet;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            &:hover{
+                color:black;
+            }
+        }
     }
+
+
 
 }

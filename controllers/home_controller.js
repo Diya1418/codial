@@ -17,6 +17,7 @@ module.exports.home = async function(req,res){
 
 
   //populate user of each post
+  
   try {
     // populate means preloading the schema 
     const posts = await Post.find({})

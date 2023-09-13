@@ -1,14 +1,18 @@
 nav {
   margin: 0px;
   height: 8vh;
-  background-color: lightcoral;
+  background-color: #c40404;
   display: flex;
   justify-content: space-between; }
   nav p {
     font-size: 50px;
-    color: aliceblue;
+    color: #eed49a;
     text-decoration: none;
     margin-top: 0px; }
+    nav p a {
+      color: black;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none; }
   nav h2 {
     color: antiquewhite;
     font-size: 50px;
@@ -21,4 +25,9 @@ nav {
     nav ul li {
       margin: 20px; }
   nav a {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif; }
+    nav a:hover {
+      color: grey; }

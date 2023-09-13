@@ -40,7 +40,7 @@ catch(err)
 {
     req.flash('error', err);
     console.log('Error in creating Post'); 
-    return;
+    return;``
 } 
 }
 

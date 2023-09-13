@@ -1,12 +1,13 @@
 #footer-foot{
     height: 10vh;
-    background-color: lightcoral;
-    margin-top:160px;
+    background-color: rgb(196, 4, 4);
+    margin-bottom: 0px;
     display:flex;
     justify-content: space-between;
+    position: relative;
     h2{
         font-size: 15px;
-        color: antiquewhite;
+        color: black;
     }
     ul{
         display:flex;
@@ -19,5 +20,11 @@
     }
     a{
         cursor:pointer;
+        text-decoration: none;
+        color: black;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        &:hover{
+            color: grey;
+        }
     }
 }
