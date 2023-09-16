@@ -1,11 +1,15 @@
 <link rel="stylesheet" href="/css/user_profile.css">
+  
+<div id="prof-pg">
+
     <h1> 
         Codial / Profile page 
     </h1>
 
     
-
-    <% if(user.id == profile_user.id){ %>
+    <div id="prof-update">
+    <% if(user.id === profile_user.id){ %>
+        
              <!-- if user matches then show the form  -->
 
              <form action="/user/update/<%= profile_user.id %>" method="post">
@@ -22,3 +26,5 @@
    
              <p> <%= profile_user.email %>   </p>
         <% } %>
+    </div>
+</div>

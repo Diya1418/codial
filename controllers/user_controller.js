@@ -1,4 +1,5 @@
 const User = require('../models/user');
+
 //render profile
 // module.exports.profile= function(req,res){
 //    if(req.cookies.user_id){
