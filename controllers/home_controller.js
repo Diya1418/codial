@@ -21,6 +21,7 @@ module.exports.home = async function(req,res){
   try {
     // populate means preloading the schema 
     const posts = await Post.find({})
+    .sort('-createdAt')
     .populate('user')
     .populate({
       path: 'comments',

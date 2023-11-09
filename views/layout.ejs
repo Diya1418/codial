@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
     
 <head>
     
@@ -7,8 +7,8 @@
         <%= title %>
         
     </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs//3.1.4/.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs//3.1.4/.min.js"></script>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js "></script>
@@ -29,12 +29,12 @@
    
     <%- include('_footer'); %>
 
-    <!-- <%- script%>
+    <%- script%>
 
     
         <% if(flash.success && flash.success.length >0){ %>
 
-            new Noty({
+            new ({
                 theme: 'relax',
                 text: "<%= flash.success %>",
                 type: 'success',
@@ -48,7 +48,7 @@
         
         <% if(flash.error && flash.error.length >0){ %>
 
-            new Noty({
+            new ({
                 theme: 'relax',
                 text: "<%= flash.error %>",
                 type: 'error',
@@ -58,8 +58,9 @@
             }).show();
 
 
-         <% } %>  -->
-
-    <!-- </script> -->
+          <% } %>  
+        
+  
+    
 </body>
 </html>
